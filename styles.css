@@ -1,92 +1,116 @@
-/* Global */
+/* General Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  transition: background 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #1a1a2e; /* Dark blue background */
+    color: white; /* White text */
 }
 
-/* Section wrapper */
+/* Header Section */
+header {
+    background: url('coding-background.jpg') no-repeat center center/cover;
+    color: #ffcc00; /* Gold-colored text */
+    padding: 40px;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    background: #ff5733; /* Bright orange */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Gold on hover */
+}
+
+/* Sections */
 section {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: 0 auto;
+    padding: 20px;
+    margin: 20px;
+    background: #16213e; /* Deep blue */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-/* ABOUT */
-/* The single unified wrapper */
-#main-content {
-  background: linear-gradient(135deg, #e0f7fa, #80deea);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: 40px auto;
+/* About Me Styling */
+.about-container {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffcc00; /* Gold text */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
 }
 
-/* Inner spacing between parts */
-#main-content .inner > div {
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.6);
-}
-#main-content .inner > div:last-child {
-  border-bottom: none;
+/* Project List */
+#projects ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Shared heading style */
-#main-content h2 {
-  font-size: 1.8em;
-  margin-bottom: 12px;
-  color: #004d40;
+#projects li {
+    background: #ffcc00;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-/* Shared paragraph/blockquote style */
-#main-content p,
-#main-content blockquote {
-  font-size: 1.1em;
-  color: #00695c;
+/* Contact Section */
+#contact p {
+    font-size: 18px;
 }
 
-/* Button in resume part */
-#main-content .btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #00796b;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-#main-content .btn:hover {
-  background: #004d40;
+#contact a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+#contact a:hover {
+    color: #ff5733; /* Orange hover */
+}
 
-/* Dark mode override */
-body.dark-mode {
-  background: #121212;
-  color: #e0e0e0;
-}
-body.dark-mode #about {
-  background: linear-gradient(135deg, #263238, #37474f);
-}
-body.dark-mode #about p {
-  color: #b0bec5;
-}
-body.dark-mode #testimonials {
-  background: #263238;
-  border-left-color: #ffb300;
-}
-body.dark-mode #testimonials blockquote {
-  background: #37474f;
-  color: #eceff1;
-}
-body.dark-mode #resume {
-  background: linear-gradient(135deg, #1a237e, #283593);
-}
-body.dark-mode #resume h2,
-body.dark-mode #resume p {
-  color: #c5cae9;
+/* Footer */
+footer {
+    background: #0f3460; /* Darker blue */
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
 }
