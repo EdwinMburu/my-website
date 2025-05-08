@@ -15,83 +15,54 @@ section {
 }
 
 /* ABOUT */
-#about {
+/* The single unified wrapper */
+#main-content {
   background: linear-gradient(135deg, #e0f7fa, #80deea);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
 }
-#about h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+
+/* Inner spacing between parts */
+#main-content .inner > div {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.6);
 }
-#about p {
-  font-size: 1.1em;
+#main-content .inner > div:last-child {
+  border-bottom: none;
+}
+
+/* Shared heading style */
+#main-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 12px;
   color: #004d40;
 }
 
-/* TESTIMONIALS */
-#testimonials {
-  background: #fff3e0;
-  border-left: 6px solid #ff9800;
-  margin-bottom: 40px;
-}
-#testimonials h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-#testimonials blockquote {
-  position: relative;
-  font-style: italic;
-  margin: 20px 0;
-  padding: 20px 30px;
-  background: #ffe0b2;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-#testimonials blockquote:before {
-  content: "“";
-  font-size: 3em;
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  color: #ff6f00;
+/* Shared paragraph/blockquote style */
+#main-content p,
+#main-content blockquote {
+  font-size: 1.1em;
+  color: #00695c;
 }
 
-/* RESUME */
-#resume {
-  background: linear-gradient(135deg, #e3f2fd, #90caf9);
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-#resume h2 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  color: #0d47a1;
-}
-#resume p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-  color: #1e88e5;
-}
-#resume .btn,
-#resume button {
+/* Button in resume part */
+#main-content .btn {
   display: inline-block;
-  padding: 12px 24px;
-  font-size: 1em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #1976d2;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #00796b;
   color: #fff;
   text-decoration: none;
+  border-radius: 6px;
   transition: background 0.2s;
 }
-#resume .btn:hover,
-#resume button:hover {
-  background: #1565c0;
+#main-content .btn:hover {
+  background: #004d40;
 }
+
 
 /* Dark mode override */
 body.dark-mode {
